@@ -260,6 +260,63 @@ color: #1fa3a3;
 margin-top: 30px;
 font-weight: bold;
 }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    header, nav, .content-container, footer {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .slider-container {
+        height: 40vh;
+    }
+
+    .prev, .next {
+        top: 90%;
+    }
+
+    .map-and-video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container, .video-container {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .map-container iframe, .video-container video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav a {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+    }
+}
+
 
 
 
