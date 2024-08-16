@@ -262,8 +262,11 @@ font-weight: bold;
 }
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-    header, nav, .content-container, footer {
+    body {
         padding: 10px;
+    }
+    
+    header {
         flex-direction: column;
         align-items: center;
     }
@@ -272,17 +275,27 @@ font-weight: bold;
         margin-bottom: 10px;
     }
 
+    header h1 {
+        text-align: center;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
     nav a {
         display: block;
         margin: 5px 0;
+        padding: 10px;
     }
 
     .slider-container {
-        height: 40vh;
+        height: 50vh;
     }
 
     .prev, .next {
-        top: 90%;
+        top: 80%;
+        font-size: 18px;
     }
 
     .map-and-video-container {
@@ -291,7 +304,7 @@ font-weight: bold;
     }
 
     .map-container, .video-container {
-        margin-right: 0;
+        margin: 0;
         width: 100%;
     }
 
@@ -299,23 +312,48 @@ font-weight: bold;
         width: 100%;
         height: auto;
     }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-right a {
+        display: inline-block;
+        margin: 0 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     nav a {
-        padding: 5px;
+        padding: 8px;
         font-size: 14px;
     }
 
-    .footer-left, .footer-center, .footer-right {
-        flex: 100%;
-        text-align: center;
+    .slider-container {
+        height: 40vh;
     }
 
     .prev, .next {
+        top: 85%;
         font-size: 16px;
     }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-right img {
+        width: 30px;
+        height: 30px;
+    }
 }
+
 
 
 
