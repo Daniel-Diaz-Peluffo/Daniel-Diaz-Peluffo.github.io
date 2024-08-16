@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Hotel Génesis</title>
+
+   <style>
+      .reserve-btn {
+            background: #202eaf;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+   </style>
+
+</head>
+<body>
+     <header>
+        <!--  Este es el LOGO \-->  
+        <a href="index.html"><img src="logo.jpeg" alt="Genesis hotel"></a>
+        <h1>Génesis Hotel⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</h1>
+        <div class="images-container">
+            <img src="cama.png" alt="Confort">
+            <img src="wifi (1).png" alt="Wi-Fi">
+            <img src="estacionamiento (1).png" alt="Parking">
+            <img src="copo-de-nieve (1).png" alt="Air">
+            <img src="restaurante.png" alt="Restaurante">
+    </header>
+
+    <nav>
+        <!--  Este es el MENU \-->
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="Servicios.html">Servicios</a>
+        <a href="Promociones.html">Promociones</a>
+        <a href="Fotos.html">Fotos</a>
+        <a href="Ubicacion.html">Ubicación</a>
+        <a href="Contactos.html">Contacto</a>
+        <a href="https://wa.link/l9clsz"  class="reserve-btn">¡Reserve ya con nosotros!</a>
+    </nav>
+<!--  Este es el SLIDER de 4 fotos \-->  
+<div class="slider-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="Genesis1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="Genesis2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="Genesis3.jpg" alt="Slide 3">
+        </div>
+        <div class="slide">
+            <img src="Genesis4.jpg" alt="Slide 3">
+        </div>
+        <div class="slide">
+            <img src="Genesis14.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+    <div class="prev" onclick="moveSlide(-1)">❮</div>
+    <div class="next" onclick="moveSlide(1)">❯</div>
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        
+        slides[slideIndex - 1].style.display = "block";
+       
+        setTimeout(showSlides, 2000);
+    }
+</script>
+
+    
+<div class="content-container">
+    <!-- Contenedor para el mapa y el video -->
+    <div class="map-and-video-container">
+        <!-- Contenedor para el mapa -->
+        <div class="map-container">
+            <h1>Ubicación Génesis Hotel</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15749.864019598117!2d-75.3956394!3d9.2919111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5914513e960d2d%3A0x789aed0a269b423c!2sHotel%20G%C3%A9nesis!5e0!3m2!1ses-419!2sco!4v1715110943081!5m2!1ses-419!2sco" width="700" height="300" style="border: 40;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h2 class="marketing-text">¡Bienvenido a Génesis Hotel! Ofrecemos una experiencia única y confortable para nuestros huéspedes. Con nuestras modernas instalaciones, excelente ubicación y servicios de primera clase, garantizamos una estancia inolvidable. ¡Reserva ahora y descubre por qué somos la mejor opción para tu próximo viaje!</h2>
+            <a href="https://wa.link/l9clsz"  class="reserve-btn">¡Reserve ya con nosotros!</a>
+
+        </div>
+        
+        <!-- Contenedor para el video -->
+        <div class="video-container">
+            <h1>Video del Hotel</h1>
+            <video autoplay loop controls>
+                <source src="video hotel.mp4" width="700" height="300" style="border:40;"type="video/mp4">
+            </video>
+            
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <!--  Este es el pie de pagina \-->
+        
+            <div class="footer-left">
+                <b><p>© 2024 Hotel Genesis - Sitio web oficial| POR: JORGE S.A.S</p></b>
+                
+            </div>
+            <div class="footer-center">
+                <b><p>Teléfono: +57 323 2214137</p>
+                <p>Correo: info@hotelgenesis.com</p>
+                <p>Ubicación: Calle 32 No 15-36 Av Alfonso Lopez    </p></b>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/genesishotelsincelejo/"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://wa.link/l9clsz"><img src="whatsapp.png" alt="whatsApp"></a>
+                <a href="https://www.instagram.com/genesishotel/"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+    </footer>
+</body>
+</html>
+
